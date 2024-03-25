@@ -1,9 +1,21 @@
 ## ResNet-18
 
 Model ResNet-18 được xây dựng trên cấu trúc Block
-![block](https://www.bing.com/images/search?view=detailV2&ccid=omYPX4m2&id=A3A858A29ADC3B1AD84111F2297B2DBF42A692A2&thid=OIP.omYPX4m2vpc13C6Nws0N9wHaFk&mediaurl=https%3a%2f%2fwww.researchgate.net%2fpublication%2f352054245%2ffigure%2ffig2%2fAS%3a1030091563859968%401622604375430%2fBasic-ResNet-Block-without-and-with-1x1-convolution.ppm&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a2660f5f89b6be9735dc2e8dc2cd0df7%3frik%3dopKmQr8teynyEQ%26pid%3dImgRaw%26r%3d0&exph=639&expw=850&q=block+res+net&simid=608040852969910847&FORM=IRPRST&ck=F41E7F1AB5974D93FD08BCCD56AC065B&selectedIndex=0&itb=0&ajaxhist=0&ajaxserp=0)
+
+<div align="center">
+  <img src="https://www.researchgate.net/publication/352054245/figure/fig2/AS:1030091563859968@1622604375430/Basic-ResNet-Block-without-and-with-1x1-convolution.ppm" width="50%" height="250"><br><br>
+</div>
 
 Sử dụng model kết hợp CrossEntropy và SGD(lr = 0.01, momentum = 0.9) cho ra kết quả chưa được tốt. Model hội tụ sau 12 epochs:
 Train Loss: 0.773, Train Acc: 0.74, Valid Loss: 0.930, Valid Acc: 0.70
-[loss_fig](./loss_plot.png)
-[acc_fig](./acc_plot.png)
+
+<div align="center">
+    <img src='./loss_plot.png' width="70%" height = '60%'>
+</div>
+
+**Loss** trên cả tập `train` và `test` đều hội tụ nhanh sau epoch 10. Từ epoch 10 loss trên tập `valid` bắt đầu đi ngang nhưng trên tập `train` vẫn tiếp tục giảm.
+
+<div align="center">
+    <img src='././acc_plot.png' width="70%" height = '60%'>
+</div>
+Độ chính xác của mô hình trên tập `train` chưa được cao (0.8) và ở tập `valid`(0.7). Có độ chênh lệch lớn `accuracy` trên 2 tập `train` và `valid`.(Model vẫn chưa khái quát được dữ liệu chưa nhìn thấy - high variance)
