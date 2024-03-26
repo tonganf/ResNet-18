@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ResNet-18
 
 Model ResNet-18 được xây dựng trên cấu trúc Block
@@ -36,4 +35,4 @@ Mô hình hội tụ nhanh hơn và độ chênh lệch giữa `trainset` và `v
 </div>
 =======
 # ResNet-18
->>>>>>> main
+
